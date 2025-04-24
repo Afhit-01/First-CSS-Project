@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ORDER</title>
+        <style>
+            body {
+                background-image: linear-gradient(315deg, #fcad03, #00be9f, #1d77ae);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: Cabinet Grotesk, sans-serif;
+            }
+            .order {
+                width: 400px;
+                background-color: white;
+                padding: 30px;
+                margin: 15px;
+                box-shadow: rgba(0, 0, 0, 7);
+                border-radius: 10px;
+            }
+            input {
+                border: 1px solid black;
+                width: 80%;
+                padding: 12px;
+                margin: 7px;
+            }
+            select {
+                border: 1px solid black;
+                width: 80%;
+                padding: 12px;
+                margin: 7px;
+            }
+            h2 {
+                font-size: 30px;
+                font-family: serif;
+                color: #1d77ae;
+            }
+            button {
+                background-color: #1d77ae;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                width: 60%;
+                padding: 10px;
+                margin: 5px;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+        <script>
+            function placeOrder() {
+                results = "<h3>Success!</h3> Here is your order.";
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <form>
+                <div class="order">
+                    <h2>Place Your Order!</h2>
+                    <label>Select Food</label><br/>
+                    <select>
+                        <option value="">--Select Food--</option><br/>
+                        <option value="jollof" id="food">Jollof Rice and Chicken</option>
+                        <option value="swallow" id="food">Swallow Ph.d</option>
+                        <option value="chips" id="food">Chicken and Chips</option>
+                        <option value="drink" id="food">Drinks and Refreshments</option>
+                    </select>
+                    <br/>
+                    <label>Select Portion/Quantity</label><br/>
+                    <select>
+                        <option value="">-- Select Portion/Quantity--</option>
+                        <option value="1" id="portion">1</option>
+                        <option value="2" id="portion">2</option>
+                        <option value="3" id="portion">3</option>
+                        <option value="4" id="portion">4</option>
+                        <option value="5" id="portion">5 max.</option>
+                    </select>
+                    <hr/>
+                    <p>Delivery Details:</p>
+                    <input type="name" placeholder="Name" required/><br/>
+                    <input type="tel" placeholder="Phone Number" required/><br/>
+                    <input type="text" placeholder="Address" required/><br/>
+                    <hr/>
+                    <p>Enter Card Details:</p>
+                    <input type="tel" placeholder="Enter Your 16-digit Card Number" required/><br/>
+                    <input type="password" placeholder="CVV" required/><br/>
+                    <input type="text" placeholder="Card Expiry MM/YY" required/><br/>
+                    <input type="password" placeholder="Enter Your Card 4-digit PIN" required/><br/>
+                    <button onclick="placeOrder()">
+                        <a href="success.html">
+                            Place Order
+                        </a>
+                    </button>
+                </div>
+            </form>
+        </center>
+    </body>
+</html>
